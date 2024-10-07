@@ -7,36 +7,26 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             bool isHidden = false;
-            Console.WriteLine($"Hidden status: {isHidden}");
+            Console.WriteLine($"Hidden status: {isHidden}\n");
 
-            Console.WriteLine($"1. Change Hidden status\n2. Exit");
-            string choise = Console.ReadLine();
-
-            switch ( choise )
-            {
-                case "1":
-                    isHidden = !isHidden;
-                    Console.WriteLine($"Hidden status: {isHidden}");
-                    break;
-                case "2":
-                    break;
-                default:
-                    Console.WriteLine("Not right command");
-                    break;
-            }
             while (true)
             {
-                bool isHidden = false;
-                Console.WriteLine($"Hidden status: {isHidden}");
-
+                Console.WriteLine($"1. Change Hidden status\n2. Exit");
                 string choise = Console.ReadLine();
-                ChangeValue(ref isHidden);
-            }
-        }
 
-        private static void ChangeValue(ref bool value)
-        {
-            value = !value;
+                switch (choise)
+                {
+                    case "1":
+                        isHidden = !isHidden;
+                        Console.WriteLine($"Hidden status: {isHidden}");
+                        break;
+                    case "2":
+                        return;
+                    default:
+                        Console.WriteLine("Not right command");
+                        break;
+                }
+            }
         }
     }
 }
