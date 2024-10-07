@@ -6,8 +6,19 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            bool isHidden = false;
-            Console.WriteLine($"Hidden status: {isHidden}");
+            while (true)
+            {
+                bool isHidden = false;
+                Console.WriteLine($"Hidden status: {isHidden}");
+
+                string choise = Console.ReadLine();
+                ChangeValue(ref isHidden);
+            }
+        }
+
+        private static void ChangeValue(ref bool value)
+        {
+            value = !value;
         }
     }
 }
