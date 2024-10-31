@@ -103,4 +103,17 @@ namespace Enemy
             }
         }
     }
+
+    public class Enemy
+    {
+        public int Id { get; }
+        public string Name { get; set; }
+        public int Health { get; set; }
+        public Enemy(int id, string name)
+        {
+            Id = id;
+            Name = name;
+            Health = 100;
+        }
+    }
 }
